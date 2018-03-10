@@ -1,0 +1,118 @@
+html, body {
+    font-family: sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+
+a{
+    color: #555555;
+}
+
+.cardy {
+    height: 330px;
+    width: 300px;
+    padding-top: 50px;
+}
+
+.cardy h3 {
+    margin-top: 60px;
+    color: #555555;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+}
+
+.navbar {
+    height: 100px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,0.5);
+    padding: 0 10% 0 10%;
+}
+
+.nav-item {
+    margin: 0 20px 0 20px;
+}
+
+.active-nav {
+    border-bottom: 3px solid #1CC661;
+    color: #1CC661;
+}
+
+.btn-register {
+    background-color: #FFFFFF;
+    width: 10%;
+}
+
+.btn-login {
+    border: 2px solid #1CC661;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #1CC661;
+    width: 10%;
+}
+
+.header-text {
+    color: #FFFFFF;
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 86px;
+    text-align: center;
+}
+
+.header-info {
+    color: #FFFFFF;
+    font-size: 24px;    
+}
+
+.bg-text {
+    position: absolute;
+    height: 600px;	
+    width: 970px;	
+    border-radius: 6px;	
+    background-color: transparent;
+    /* box-shadow: 0 2px 35px 0 rgba(0,0,0,0.5); */
+    left: 50%;
+    margin-left: -485px;
+    top: 50%;
+    margin-top: -300px;  
+    
+    padding: 150px 20px 20px 20px;
+
+    text-align: center;
+}
+
+.bg { 
+    /* The image used */
+    background-image: url("fundaaal.png");
+
+    /* Full height */
+    height: 850px;
+    width: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.btn-success {
+    height: 60px;
+    width: 230px;
+    border-radius: 4px;
+    background-color: #1CC661;
+}
+
+#howItWorks {
+    color: #555555;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+#aboutUs {
+    color: #555555;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 40px;
+}
+

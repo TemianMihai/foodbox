@@ -78,7 +78,7 @@ button {
 
 .bg {
     /* The image used */
-    background-image: url("assets/fundal.png");
+    background-image: url("fundal.png");
 
     /* Full height */
     height: 100%;
