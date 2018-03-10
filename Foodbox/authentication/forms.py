@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
+from .models import Account
 
 
 class LoginForm(forms.Form):
@@ -73,3 +74,16 @@ class UserRegisterForm(forms.ModelForm):
         ):
             raise forms.ValidationError("Name contains invalid characters")
         return last_name
+
+class AccRegisterForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = ['phonenumber']
+        widgets = {
+            'phonenumber' : forms.TextInput({'required':'required','placeholder':'Phonenumber'})
+        }
+    def clean_phonenumber(self):
+        phone_number = self.cleaned_data['phonenumber']
+        if phone_number[0] != '0' or phone_number[1] != '7' or len(phone_number) != 10 or phone_number.isdigit() == False:
+            raise forms.ValidationError("Invalid phonenumber")
+        return phone_number

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'django_extensions',
     'authentication',
+    'packs',
 ]
 
 MIDDLEWARE_CLASSES = [
