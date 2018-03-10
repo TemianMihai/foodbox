@@ -5,6 +5,97 @@
     <title>Title</title>
 </head>
 <body>
+                        <p class="important">Inregistrare</p>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                                <div class="input-field" style="margin-left: 9%;margin-right:20%; margin-bottom:2%;">
+                                    <input placeholder="Email"  name="username" value="{{form.body}}" type="text" class="validate">
+                                    <label>Email</label>
+
+                                    {% if form.username.errors %}
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.username.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+
+
+                                <div class="input-field" style="margin-left: 9%;margin-right: 20%; margin-bottom:2%;">
+                                    <input placeholder="Prenume" name="first_name" value="{{form.body}}" type="text" class="validate">
+                                    <label>Prenume</label>
+
+                                    {% if form.first_name.errors %}
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.first_name.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+
+                                <div class="input-field" style="margin-left: 9%;margin-right: 20%; margin-bottom:2%;">
+                                    <input placeholder="Nume" name="last_name" value="{{form.body}}" type="text" class="validate">
+                                    <label>Nume</label>
+
+                                    {% if form.last_name.errors %}
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.last_name.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+
+                                <div class="input-field" style="margin-left: 9%;margin-right: 20%; margin-bottom:2%;">
+                                    <input placeholder="Parola" name="password" value="{{form.body}}" type="password" class="validate">
+                                    <label>Parola</label>
+
+                                    {% if form.password.errors %}
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.password.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+
+                                <div class="input-field" style="margin-left: 9%;margin-right: 20%; margin-bottom:2%;">
+                                    <input placeholder="Confirma parola" name="retypepassword" value="{{form.body}}" type="password" class="validate">
+                                    <label>Confirma parola</label>
+
+                                    {% if form.retypepassword.errors %}
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.retypepassword.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+
+
+                                <div>
+                                    <button class="but" type="submit">Continua ➜</button>
+                                </div>
+                        </form>
+
+
 
 </body>
 </html>

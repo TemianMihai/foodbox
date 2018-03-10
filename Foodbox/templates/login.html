@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+    <form method="POST">
+        {% csrf_token %}
+            <input placeholder="Email" name="username" value="{{form.body}}" type="text" class="validate">
+            <label for="first_name">Nume utilizator</label>
 
+            <input placeholder="Parola" name="password" value="{{form.body}}" type="password" class="validate">
+            <label for="password">Parola</label>
+
+        <div>
+            <button class="butt" type="submit">Continua ➜</button>
+        </div>
+
+        {% if errors %}
+          <div class="alert alert-danger alert-dismissible" role="alert">
+             <strong>Warning!</strong>
+             {% for message in errors %}
+                     {{ message }}
+            {% endfor %}
+          </div>
+        {% endif %}
+    </form>
 </body>
 </html>
