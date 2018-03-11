@@ -73,194 +73,198 @@
                     <br>
                     <form method="POST">
                         {% csrf_token %}
+                    <div class="row" style="margin-left: 10%;">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Name</label>
+                                <input type="text" name="name" value="{{form.body}}" class="form-control" placeholder="Ex. Marcel">
+                            </div>
+                            {% if form.name.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.name.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Last name</label>
+                                <input type="text" name="name2" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. Gica">
+                            </div>
+                            {% if form.name2.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.name2.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                        <br>
 
                     <div class="row" style="margin-left: 10%;">
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Name</label>
-                                    <input type="text" name="name" value="{{form.body}}" class="form-control" placeholder="Ex. Marcel">
-                                </div>
-                                                        {% if form.name.errors %}
-
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.name.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Email</label>
+                                <input type="email" name="email" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. example@example.com">
                             </div>
+                            {% if form.email.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.email.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
 
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Last name</label>
-                                    <input type="text" name="name2" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. Gica">
-                                </div>
-                                                        {% if form.name2.errors %}
-
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.name2.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Phonenumber</label>
+                                <input type="text" name=phonenumber value="{{form.body}}" class="form-control"  placeholder="Ex. 0756212876">
                             </div>
+                            {% if form.phonenumber.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.phonenumber.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
-<br>
-                                        <div class="row" style="margin-left: 10%;">
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Email</label>
-                                    <input type="email" name="email" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. example@example.com">
-                                </div>
-                                                        {% if form.email.errors %}
 
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.email.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                    <br>
+
+                    <div class="row" style="margin-left: 10%;">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Address</label>
+                                <input type="text" name="address" value="{{form.body}}" class="form-control"  placeholder="Ex. Str Iuliu Maniu, Nr 10 Ap 3">
                             </div>
+                            {% if form.address.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.address.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
 
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Phonenumber</label>
-                                    <input type="text" name=phonenumber value="{{form.body}}" class="form-control"  placeholder="Ex. 0756212876">
-                                </div>
-                                                        {% if form.phonenumber.errors %}
-
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.phonenumber.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Age</label>
+                                <input type="text" name="age" value="{{form.body}}" class="form-control"  placeholder="Ex. 23">
                             </div>
+                            {% if form.age.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.age.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
-<br>
-                                        <div class="row" style="margin-left: 10%;">
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Address</label>
-                                    <input type="text" name="address" value="{{form.body}}" class="form-control"  placeholder="Ex. Str Iuliu Maniu, Nr 10 Ap 3">
-                                </div>
-                                                        {% if form.address.errors %}
 
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.address.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                    <br>
+
+                    <div class="row" style="margin-left: 10%;">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Gender</label>
+                                <input type="text" name="gender" value="{{form.body}}" class="form-control"  placeholder="Ex. Male">
                             </div>
+                            {% if form.gender.errors %}
 
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Age</label>
-                                    <input type="text" name="age" value="{{form.body}}" class="form-control"  placeholder="Ex. 23">
-                                </div>
-                                                        {% if form.age.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.gender.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
 
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.age.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Current Weight</label>
+                                <input type="text" name="current_weight" value="{{form.body}}" class="form-control"  placeholder="Ex. 76">
                             </div>
+                            {% if form.current_weight.errors %}
+
+                                <strong>Warning!</strong>
+                                {% for errors in form.current_weight.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
-<br>
-                                        <div class="row" style="margin-left: 10%;">
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Gender</label>
-                                    <input type="text" name="gender" value="{{form.body}}" class="form-control"  placeholder="Ex. Male">
-                                </div>
-                                                        {% if form.gender.errors %}
 
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.gender.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                    <br>
+
+                    <div class="row" style="margin-left: 10%;">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Desired Weight</label>
+                                <input type="text" name="desired_weight" value="{{form.body}}" class="form-control"  placeholder="Ex. 70">
                             </div>
+                            {% if form.desired_weight.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.phonenumber.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
 
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Current Weight</label>
-                                    <input type="text" name="current_weight" value="{{form.body}}" class="form-control"  placeholder="Ex. 76">
-                                </div>
-                                                        {% if form.current_weight.errors %}
-
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.current_weight.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Height</label>
+                                <input type="text" name="height" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. 1,87">
                             </div>
+                            {% if form.height.errors %}
+
+                                <strong>Warning!</strong>
+                                {% for errors in form.height.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
-<br>
-                                        <div class="row" style="margin-left: 10%;">
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Desired Weight</label>
-                                    <input type="text" name="desired_weight" value="{{form.body}}" class="form-control"  placeholder="Ex. 70">
-                                </div>
-                                                        {% if form.desired_weight.errors %}
 
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.phonenumber.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                        <br>
+
+                    <div class="row" style="margin-left: 10%;">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Duration of time</label>
+                                <input type="text" name="duration" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. 1 week">
                             </div>
+                            {% if form.duration.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.duration.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
 
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Height</label>
-                                    <input type="text" name="height" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. 1,87">
-                                </div>
-                                                        {% if form.height.errors %}
-
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.height.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="emailField">Restrictions</label>
+                                <input type="text" name="restrictions" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Any allergy or food you don't like">
                             </div>
+                            {% if form.restrictions.errors %}
+                                <strong>Warning!</strong>
+                                {% for errors in form.restrictions.errors %}
+                                        {{ errors }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
-<br>
-                                        <div class="row" style="margin-left: 10%;">
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Duration of time</label>
-                                    <input type="text" name="duration" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. 1 week">
-                                </div>
-                                                        {% if form.duration.errors %}
 
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.duration.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
-                            </div>
+                    <br><br>
 
-                            <div class="col-5">
-                                <div class="form-group">
-                                    <label for="emailField">Restrictions</label>
-                                    <input type="text" name="restrictions" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Any allergy or food you don't like">
-                                </div>
-                                                        {% if form.restrictions.errors %}
-
-                                                        <strong>Warning!</strong>
-				                                        {% for errors in form.restrictions.errors %}
-				                                                {{ errors }}
-				                                        {% endfor %}
-                        {% endif %}
-                            </div>
-                    </div>
-<br><br>
                     <p align="center" style="color: #919191">For detailed information about your body data, would you like a Tanita Scan for free?</p>
                     <div class="form-check" style="margin-left: 45%;">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Yes, i would like to</label>
                     </div>
 
-                                                <button type="submit" class="btn btn-success" style="background-color: rgb(245, 245, 245); width: 300px; height: 45px; color: #1CC661; margin-left: 42%">Send to a nutritionist</button>
+                    <br>
+
+                        <button type="submit" class="btn btn-success" style="background-color: rgb(245, 245, 245); width: 300px; height: 45px; color: #1CC661; margin-left: 40%">Send to a nutritionist</button>
 
                     </form>
                 </div>
