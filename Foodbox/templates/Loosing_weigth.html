@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foodobox</title>
+    <!-- Bootstrap css and scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Stefan's css -->
+    <link rel="stylesheet" href="{% static "style4.css" %}">
+
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="#"><img src="{% static "Bitmap.png" %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active-nav">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nutritional programs</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto" style="margin-left: 65%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" style="width: 100%; padding: 0; margin: 0;">
+        <div class="row">
+            <div class="col-12">
+                <div class="bg">
+                    <div class="bg-text">
+                        <p class="header-text">Choose the nutritioanal plans that suits you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="combined-shape">
+        <p class="header-text" style="font-size: 30px;">Balanced eating!</p>
+    </div>
+    <br> <br>
+
+        <div class="row" style="text-align: center;">
+            <div class="col-12">
+                <h1 id="howItWorks"><b>First you have to complete a formular<b></h1>
+                <hr style="width: 11%; background-color: #1CC661; height: 1px;">
+            </div>
+        </div>
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="rectangle-17">
+                <div class="col-12">
+                    <br>
+                    <h1 id="howItWorks" align="center"><b>The Formular<b></h1>
+
+                    <br>
+                    <form method="POST">
+                        {% csrf_token %}
+
+                    <div class="row" style="margin-left: 10%;">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Name</label>
+                                    <input type="text" name="name" value="{{form.body}}" class="form-control" placeholder="Ex. Marcel">
+                                </div>
+                                                        {% if form.name.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.name.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Last name</label>
+                                    <input type="text" name="name2" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. Gica">
+                                </div>
+                                                        {% if form.name2.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.name2.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+                    </div>
+<br>
+                                        <div class="row" style="margin-left: 10%;">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Email</label>
+                                    <input type="email" name="email" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. example@example.com">
+                                </div>
+                                                        {% if form.email.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.email.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Phonenumber</label>
+                                    <input type="text" name=phonenumber value="{{form.body}}" class="form-control"  placeholder="Ex. 0756212876">
+                                </div>
+                                                        {% if form.phonenumber.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.phonenumber.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+                    </div>
+<br>
+                                        <div class="row" style="margin-left: 10%;">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Address</label>
+                                    <input type="text" name="address" value="{{form.body}}" class="form-control"  placeholder="Ex. Str Iuliu Maniu, Nr 10 Ap 3">
+                                </div>
+                                                        {% if form.address.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.address.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Age</label>
+                                    <input type="text" name="age" value="{{form.body}}" class="form-control"  placeholder="Ex. 23">
+                                </div>
+                                                        {% if form.age.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.age.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+                    </div>
+<br>
+                                        <div class="row" style="margin-left: 10%;">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Gender</label>
+                                    <input type="text" name="gender" value="{{form.body}}" class="form-control"  placeholder="Ex. Male">
+                                </div>
+                                                        {% if form.gender.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.gender.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Current Weight</label>
+                                    <input type="text" name="current_weight" value="{{form.body}}" class="form-control"  placeholder="Ex. 76">
+                                </div>
+                                                        {% if form.current_weight.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.current_weight.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+                    </div>
+<br>
+                                        <div class="row" style="margin-left: 10%;">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Desired Weight</label>
+                                    <input type="text" name="desired_weight" value="{{form.body}}" class="form-control"  placeholder="Ex. 70">
+                                </div>
+                                                        {% if form.desired_weight.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.phonenumber.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Height</label>
+                                    <input type="text" name="height" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. 1,87">
+                                </div>
+                                                        {% if form.height.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.height.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+                    </div>
+<br>
+                                        <div class="row" style="margin-left: 10%;">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Duration of time</label>
+                                    <input type="text" name="duration" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Ex. 1 week">
+                                </div>
+                                                        {% if form.duration.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.duration.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="emailField">Restrictions</label>
+                                    <input type="text" name="restrictions" value="{{form.body}}" class="form-control" id="emailField"  placeholder="Any allergy or food you don't like">
+                                </div>
+                                                        {% if form.restrictions.errors %}
+
+                                                        <strong>Warning!</strong>
+				                                        {% for errors in form.restrictions.errors %}
+				                                                {{ errors }}
+				                                        {% endfor %}
+                        {% endif %}
+                            </div>
+                    </div>
+<br><br>
+                    <p align="center" style="color: #919191">For detailed information about your body data, would you like a Tanita Scan for free?</p>
+                    <div class="form-check" style="margin-left: 45%;">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Yes, i would like to</label>
+                    </div>
+
+                                                <button type="submit" class="btn btn-success" style="background-color: rgb(245, 245, 245); width: 300px; height: 45px; color: #1CC661; margin-left: 42%">Send to a nutritionist</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br>
+
+<br><br>
+            <div class="row" style="text-align: center;">
+            <div class="col-12">
+                <p align="center">Now you will need to wait until a nutritionist will make your program and send it to you</p>
+            </div>
+        </div>
+
+    <br><br>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light  "style="height: 151px;width: 100%;background-color: #555555;">
+        <a class="navbar-brand" href="#"><img src="{% static "logo alb.png" %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-left: 5%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#fff;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#fff;">Nutritional programs</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto" style="margin-left: 40%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color:#fff;">My account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+</html>

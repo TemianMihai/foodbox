@@ -1,10 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
     <meta charset="UTF-8">
-    <title>Foodbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foodobox</title>
+    <!-- Bootstrap css and scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Stefan's css -->
+    <link rel="stylesheet" href="{% static "style4.css" %}">
+
 </head>
 <body>
- <h1>Merge</h1>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="#"><img src="{% static "Bitmap.png" %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active-nav">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nutritional programs</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto" style="margin-left: 65%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="width: 100%; padding: 0; margin: 0;">
+        <div class="row">
+            <div class="col-12">
+                <div class="bg">
+                    <div class="bg-text">
+                        <p class="header-text">Choose the nutritioanal plans that suits you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row" style="text-align: center;">
+            <div class="col-12">
+                <h1 id="howItWorks"><b>Choose a program<b></h1>
+                <hr style="width: 11%; background-color: #1CC661; height: 1px;">
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 24%; margin-top: 50px;">
+            <a href="/lose_weigth" style="text-decoration: none;">
+            <div class="col-4" style="text-align: center;">
+                <div class="cardy">
+                    <img src="{% static "p3.png" %}" style="width:294px; margin-top:-50px;" alt="">
+                    <h3>Loosing Weigth</h3>
+                    <p align="center" style="color: #555555; font-size: 14px;">Loose fat, not muscle.</p>
+                </div>
+            </div>
+            </a>
+            <a href="/balanced_eating" style="text-decoration: none;">
+            <div class="col-4" style="text-align: center;">
+                <div class="cardy">
+                    <img src="{% static "p2.png" %}" style="width:294px; margin-top:-50px;" alt="">
+                    <h3>Balanced eating</h3>
+                    <p align="center" style="color: #555555; font-size: 14px;">Develop healthy eating habits.</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="/mass_building" style="text-decoration: none;">
+            <div class="col-4" style="text-align: center;">
+                <div class="cardy">
+                    <img src="{% static "p4.png" %}" style="width:294px; margin-top:-50px;" alt="">
+                    <h3>Mass Building</h3>
+                    <p align="center" style="color: #555555; font-size: 14px;">Increase your weigth constantly.</p>
+                </div>
+            </div>
+            </a>
+        </div>
+                <br> <br>
+        <div class="row" style="margin-left: 33%;">
+            <a href="/sport_program" style="text-decoration: none;">
+            <div class="col-4" style="text-align: center;">
+                <div class="cardy">
+                    <img src="{% static "p1.png" %}" style="width:294px; margin-top:-50px;" alt="">
+                    <h3>Sport program</h3>
+                    <p align="center" style="color: #555555; font-size: 14px;">For those with intensive work.</p>
+                </div>
+            </div>
+            </a>
+
+            <a href="/vegetarian_food" style="text-decoration: none;">
+            <div class="col-4" style="text-align: center;">
+                <div class="cardy">
+                    <img src="{% static "p5.png" %}" style="width:294px; margin-top:-50px;" alt="">
+                    <h3>Vegetarian food</h3>
+                    <p align="center" style="color: #555555; font-size: 14px;">Healthy food for vegetarians.</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <br><br>
+                        <button type="submit" class="btn btn-success" style="background-color: rgb(245, 245, 245); width: 200px; height: 45px; color: #1CC661; margin-left: 45%">More soon...</button>
+
+    </div>
+    <br><br>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light  "style="height: 151px;width: 100%;background-color: #555555;">
+        <a class="navbar-brand" href="#"><img src="{% static "logo alb.png" %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-left: 5%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#fff;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#fff;">Nutritional programs</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto" style="margin-left: 40%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color:#fff;">My account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
 </body>
 </html>

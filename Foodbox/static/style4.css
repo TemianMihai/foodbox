@@ -1,0 +1,194 @@
+html, body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+a{
+    color: #555555;
+}
+
+.cardy {
+    height: 330px;
+    width: 300px;
+    padding-top: 50px;
+    border: 3px solid #B8B8B8;
+    border-radius: 6px;
+}
+
+.cardy h3 {
+    margin-top: 25px;
+    color: #555555;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+}
+
+.navbar {
+    height: 100px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,0.5);
+    padding: 0 10% 0 10%;
+}
+
+.nav-item {
+    margin: 0 20px 0 20px;
+}
+
+.active-nav {
+    border-bottom: 3px solid #1CC661;
+    color: #1CC661;
+}
+
+.btn-register {
+    background-color: #FFFFFF;
+    width: 10%;
+}
+
+.btn-login {
+    border: 2px solid #1CC661;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #1CC661;
+    width: 10%;
+}
+
+.header-text {
+    color: #FFFFFF;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 75px;
+    text-align: center;
+}
+
+.header-info {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.bg-text {
+    position: absolute;
+    height: 600px;
+    width: 970px;
+    border-radius: 6px;
+    background-color: transparent;
+    /* box-shadow: 0 2px 35px 0 rgba(0,0,0,0.5); */
+    left: 50%;
+    margin-left: -485px;
+    top: 50%;
+    margin-top: -265px;
+
+    padding: 150px 20px 20px 20px;
+
+    text-align: center;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("bckp.png");
+
+    /* Full height */
+    height: 850px;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-success {
+    height: 60px;
+    width: 230px;
+    border-radius: 4px;
+    background-color: #1CC661;
+}
+
+#howItWorks {
+    color: #555555;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+#aboutUs {
+    color: #555555;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+.bg1 {
+    /* The image used */
+    background-image: url("p2.png");
+
+    /* Full height */
+    height: 850px;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.combined-shape {
+	height: 90px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	background-color: #1CC661;
+	box-shadow: 0 2px 25px 0 rgba(0,0,0,0.2);
+}
+
+
+.rectangle-17 {
+	height: 1065px;
+	width: 1170px;
+	border: 2px solid #B8B8B8;
+	border-radius: 6px;
+}
+
+
+form .form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+input[type="text"] {
+    border: 0;
+    border-bottom: 2px solid #B8B8B8;
+    padding-left: 0px;
+    border-radius: 0px;
+}
+
+input[type="text"]:focus {
+    border-color: #1CC661;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input[type="email"] {
+    border: 0;
+    border-bottom: 2px solid #B8B8B8;
+    padding-left: 0px;
+    border-radius: 0px;
+}
+
+input[type="email"]:focus {
+    border-color: #1CC661;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.path-15 {
+	box-sizing: border-box;
+	height: 780px;
+	width: 2px;
+	border: 2px solid #1CC661;
+}
